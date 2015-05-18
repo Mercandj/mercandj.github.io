@@ -53,7 +53,8 @@
                 fclose($f);
             }
 
-            echo file_get_contents("http://mercandalli.com");
+            header("Location: {$_SERVER['HTTP_REFERER']}");
+            exit;
         //}
     }
 ?>
