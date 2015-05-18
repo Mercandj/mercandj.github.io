@@ -25,7 +25,7 @@
             if(strlen($first_name) > 25) $first_name = substr($first_name, 0,25);
             if(strlen($last_name) > 25) $last_name = substr($last_name, 0,25);
 
-            $counter_name = "/index/txt/message.txt";
+            $counter_name = "index_message.txt";
             // Check if a text file exists. If not create one and initialize it to zero.
             if (!file_exists($counter_name)) {
                 $f = fopen($counter_name, "w");
@@ -54,7 +54,7 @@
                 fclose($f);
             }
 
-            sleep(10);
+            exit();
         }
     }
 ?>
