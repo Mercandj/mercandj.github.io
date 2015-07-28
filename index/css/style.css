@@ -1,6 +1,23 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../font/fontawesome/fontawesome-webfont.eot?v=4.3.0');
+  src: url('../font/fontawesome/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../font/fontawesome/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../font/fontawesome/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../font/fontawesome/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../font/fontawesome/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
 body, html
 {
-	background-color: #EDEDED !important;
+	background-color: #f8f8f8 !important;
 }
 
 .main-color-background,
@@ -16,26 +33,63 @@ body, html
 .intro
 {
 	text-align: center;
-	padding-top: 13%;
-	padding-bottom: 13%;
+	padding-top: 42px;
+	padding-bottom: 42px;
 	margin-bottom: 50px;
 }
 
 .intro h1
 {
 	font-family:"Roboto";
-	font-weight: lighter;
-	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 24px;
+    margin: 0;
 }
+
+.intro h2
+{
+    margin: 0;
+    line-height: 1;
+    height: 24px;
+}
+.follow_me {
+    margin-top: -6px;
+    margin-bottom: 6px;
+}
+.follow_me i {
+    font-size: 24px;
+    height: 24px;
+    width: 32px;
+    margin: 0 10px 0 0;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    background: transparent;
+    opacity: 0.5;
+    color: #444;
+}
+.follow_me i:hover {
+    opacity: 0.9;
+    color: white;
+    background: transparent;
+}
+
+.fa-twitter:before { content: "\f099"; }
+.fa-facebook:before { content: "\f09a"; }
+.fa-github:before { content: "\f09b"; }
+.fa-linkedin:before { content: "\f0e1"; }
+.fa-google-plus:before { content: "\f0d5"; }
 
 .intro h5
 {
-	text-transform: uppercase;
 	background-color: #f5f5f5;
 	padding: 10px;
 	color: #333333;
 	display: inline-block;
-	font-size: 1.2rem;
+	font-size: 14px;
+    margin-top: 4px;
 }
 
 
@@ -73,6 +127,48 @@ body, html
 	margin-bottom: 15px;
 }
 
+
+.portfolio .card .card-image{
+	height: auto;
+}
+.portfolio .card .card-image:before {
+    z-index: 1;
+	content: '';
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 60px;
+	bottom: 0;
+	background: -webkit-linear-gradient(to top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 30%, transparent 100%);
+	background: -o-linear-gradient(to top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 30%, transparent 100%);
+	background: -moz-linear-gradient(to top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 30%, transparent 100%);
+	background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 30%, transparent 100%);
+}
+.portfolio .card .card-image .card-title {
+	z-index: 2;
+	font-size: 18px;
+	font-weight: 400;
+	padding: 10px 20px;
+}
+.portfolio .card .card-content p {
+	font-weight: 300;
+}
+.portfolio .card .card-content ul {
+	margin: 4px 0;
+	font-size: 13px;
+}
+
+.portfolio .card {
+	transition: all 0.3s ease-out;	
+}
+.portfolio .card:hover {
+	transition: all 0.3s ease-out;
+    box-shadow: 0 6px 20px #AFAFAF;
+}
+.portfolio .card a {
+	color: rgba(0, 0, 0, 0.870588);
+}
+
 .portfolio .col
 {
 	margin-bottom: 24px;
@@ -81,7 +177,7 @@ body, html
 .portfolio h5
 {
 	text-align: center;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	margin-bottom: 15px;
 }
 
@@ -124,7 +220,7 @@ body, html
 .contact h5
 {
 	text-align: center;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	margin-bottom: 15px;
 }
 
@@ -162,3 +258,5 @@ footer
 	padding-top: 0px;
 	padding-bottom: 24px;
 }
+
+
