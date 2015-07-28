@@ -260,3 +260,7 @@ footer
 }
 
 
+.card.small,
+.card.small .card-content {
+    height: auto;
+}
