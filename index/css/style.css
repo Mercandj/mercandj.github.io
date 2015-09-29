@@ -169,6 +169,20 @@ body, html
 	color: rgba(0, 0, 0, 0.870588);
 }
 
+.portfolio .card a.btn {
+	color: white;
+    padding: 0px 9px;
+    margin-top: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    height: 26px;
+}
+.portfolio .card a.btn + a.btn {
+	margin-left: 6px;
+}
+
 .portfolio .col
 {
 	margin-bottom: 24px;
