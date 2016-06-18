@@ -42,7 +42,7 @@ body, html
 {
 	font-family:"Roboto";
 	font-weight: 300;
-	font-size: 24px;
+	font-size: 26px;
     margin: 0;
 }
 
@@ -118,18 +118,16 @@ body, html
 	margin-bottom: 45px;
 }
 
-.about .card
-{
+.about .card {
 	text-align: center;
 }
 
-.about .card img
-{
+.about .card img {
 	margin-bottom: 15px;
 }
 
 
-.portfolio .card .card-image{
+.portfolio .card .card-image {
 	height: auto;
 }
 .portfolio .card .card-image:before {
@@ -153,6 +151,7 @@ body, html
 }
 .portfolio .card .card-content p {
 	font-weight: 300;
+	font-size: 18px;
 }
 .portfolio .card .card-content ul {
 	margin: 4px 0;
@@ -172,11 +171,11 @@ body, html
 
 .portfolio .card a.btn {
 	color: white;
-    padding: 0px 9px;
+    padding: 1px 9px 0px 9px;
     margin-top: 10px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 26px;
     height: 26px;
 }
