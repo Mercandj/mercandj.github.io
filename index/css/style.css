@@ -14,24 +14,56 @@
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
 }
+@font-face {
+    font-family: "google-sans-medium";
+    src: url("../font/google-sans/google_sans_medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+.google-sans-medium {
+  font: normal normal normal 14px/1 google-sans-medium;	
+}
+@font-face {
+    font-family: "google-sans-bold";
+    src: url("../font/google-sans/google_sans_bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+.google-sans-bold {
+  font: normal normal normal 14px/1 google-sans-bold;	
+}
 
-body, html
-{
+body, html {
 	background-color: #f8f8f8 !important;
 }
 
 .main-color-background,
-.main-color-background:hover
-{
+.main-color-background:hover {
 	background-color: #26aeee;
 }
-.main-color
-{
+.main-color {
 	color: #26aeee;
 }
 
-.intro
-{
+.card {
+	border-radius: 16px;
+}
+.button {
+	border-radius: 12px;
+}
+.button-shadow {
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.button-shadow:hover {
+    transition: all 0.3s ease-out;
+	-webkit-box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.20), 0 4px 12px 0 rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.20), 0 4px 12px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.20), 0 4px 12px 0 rgba(0, 0, 0, 0.16);
+}
+
+.intro {
 	text-align: center;
 	padding-top: 42px;
 	padding-bottom: 42px;
@@ -46,8 +78,7 @@ body, html
     margin: 0;
 }
 
-.intro h2
-{
+.intro h2 {
     margin: 0;
     line-height: 1;
     height: 24px;
@@ -172,33 +203,32 @@ body, html
 }
 
 .portfolio .card a.btn {
+	border-radius: 12px;
 	color: white;
     padding: 1px 9px 0px 9px;
     margin-top: 10px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 26px;
     height: 26px;
+    font: normal normal normal 13px/2 google-sans-bold;	
 }
 .portfolio .card a.btn + a.btn {
 	margin-left: 6px;
 }
 
-.portfolio .col
-{
+.portfolio .col {
 	margin-bottom: 24px;
 }
 
-.portfolio h5
-{
+.portfolio h5 {
 	text-align: center;
 	text-transform: capitalize;
 	margin-bottom: 15px;
 }
 
-.portfolio h6
-{
+.portfolio h6 {
 	text-align: center;
 	text-transform: uppercase;
 	margin-bottom: 45px;
