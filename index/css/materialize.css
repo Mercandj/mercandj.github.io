@@ -5176,7 +5176,7 @@ nav .input-field label.active {
 }
 @font-face {
     font-family: "Roboto";
-    src: url("../font/roboto/Roboto-Light.woff2") format("woff2"), url("../font/roboto/Roboto-Light.woff") format("woff"), url("../font/roboto/Roboto-Light.ttf") format("truetype");
+    src: url("../font/roboto/Roboto-Light.ttf") format("truetype");
     font-weight: 300;
 }
 @font-face {
@@ -5191,7 +5191,7 @@ nav .input-field label.active {
 }
 @font-face {
     font-family: "Roboto";
-    src: url("../font/roboto/Roboto-Bold.woff2") format("woff2"), url("../font/roboto/Roboto-Bold.woff") format("woff"), url("../font/roboto/Roboto-Bold.ttf") format("truetype");
+    src: url("../font/roboto/Roboto-Bold.ttf") format("truetype");
     font-weight: 700;
 }
 a {
