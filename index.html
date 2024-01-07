@@ -1058,7 +1058,7 @@
     <footer>
         <div class="footer-copyright">
             <div class="container">
-                © 2015-2023 Copyright
+                © 2015-<span id="current-year">2024</span> Copyright
             </div>
 
             <!-- AUTO PROMO -->
@@ -1070,6 +1070,7 @@
     <script src="index/js/jquery.min.js"></script>
     <script src="index/js/materialize.min.js"></script>
     <script src="index/js/index.js"></script>
+    <script>document.getElementById('current-year').innerText = new Date().getFullYear();</script>
 
     <!-- https://www.google.com/adsense/new/u/0/pub-4616471093567176/home -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4616471093567176" crossorigin="anonymous"></script>
