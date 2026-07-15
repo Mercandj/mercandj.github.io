@@ -4,6 +4,7 @@
     src: url("../font/google-sans/google_sans_medium.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 .google-sans-medium {
   font: normal normal normal 14px/1 google-sans-medium;	
@@ -13,6 +14,7 @@
     src: url("../font/google-sans/google_sans_bold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 .google-sans-bold {
   font: normal normal normal 14px/1 google-sans-bold;	
