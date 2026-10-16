@@ -28,6 +28,33 @@
         return phrases[i];
     }
 
+    var pill = el.closest('h5');
+
+    // Width of the pill once `phrase` is fully typed (measured without transition).
+    function fullWidth(phrase) {
+        var prevText = el.textContent, prevWidth = pill.style.width, prevTr = pill.style.transition;
+        pill.style.transition = 'none';
+        pill.style.width = 'auto';
+        el.textContent = phrase;
+        var w = pill.getBoundingClientRect().width;
+        el.textContent = prevText;
+        pill.style.width = prevWidth;
+        pill.offsetWidth; // force reflow
+        pill.style.transition = prevTr;
+        return w;
+    }
+
+    // Morph the pill to the next phrase's width once, instead of resizing on every character.
+    function morphTo(phrase) {
+        if (!pill) return;
+        pill.style.width = fullWidth(phrase) + 'px';
+    }
+
+    if (pill) {
+        pill.classList.add('typewriter-pill');
+        pill.style.width = pill.getBoundingClientRect().width + 'px';
+    }
+
     var text = el.textContent;
     var current = pick();
     var pos = 0, deleting = false;
@@ -41,7 +68,7 @@
         if (!deleting && pos === current.length) {
             deleting = true; delay = 1800;
         } else if (deleting && pos === 0) {
-            deleting = false; current = pick(); delay = 400;
+            deleting = false; current = pick(); morphTo(current); delay = 600;
         }
         setTimeout(tick, delay);
     }

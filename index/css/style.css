@@ -352,3 +352,13 @@ footer
     min-width: 40px;
     text-align: center;
 }
+
+/* Smooth pill resize while the typewriter text changes */
+.typewriter-pill {
+    box-sizing: border-box;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
