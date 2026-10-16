@@ -123,7 +123,10 @@ body, html {
 .intro h5
 {
 	background-color: #f5f5f5;
-	padding: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 18px;
+	padding-right: 18px;
 	color: #333333;
 	display: inline-block;
 	font-size: 14px;
@@ -313,4 +316,39 @@ footer
 .card.small,
 .card.small .card-content {
     height: auto;
+}
+.typewriter-cursor {
+    display: inline-block;
+    width: 0.6em;
+    height: 1.5em;
+    margin-left: 3px;
+    opacity: 0.85;
+    vertical-align: middle;
+    background: currentColor;
+    animation: typewriter-blink 1s steps(1) infinite;
+}
+
+@keyframes typewriter-blink {
+    50% { opacity: 0; }
+}
+
+#typewriter {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5em;
+    min-height: 1.5em;
+}
+
+/* Store icons inside card buttons */
+.portfolio .card a.btn i.fab {
+    font-size: 15px;
+    line-height: 26px;
+    height: 26px;
+    width: auto;
+    vertical-align: top;
+    margin: 0;
+}
+.portfolio .card a.btn {
+    min-width: 40px;
+    text-align: center;
 }
