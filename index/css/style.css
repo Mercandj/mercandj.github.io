@@ -73,6 +73,18 @@ body, html {
 .follow_me {
     margin-top: -6px;
     margin-bottom: 6px;
+    /* Centered when it fits, left aligned + scrollable when it overflows */
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+.follow_me::-webkit-scrollbar {
+    display: none;
 }
 .follow_me i {
     font-size: 24px;
