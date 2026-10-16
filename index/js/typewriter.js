@@ -53,6 +53,16 @@
     if (pill) {
         pill.classList.add('typewriter-pill');
         pill.style.width = pill.getBoundingClientRect().width + 'px';
+        // Re-measure (text + cursor) once web fonts are loaded, since they change the text width.
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(function () {
+                var prevTr = pill.style.transition;
+                pill.style.transition = 'none';
+                pill.style.width = fullWidth(el.textContent) + 'px';
+                pill.offsetWidth; // force reflow
+                pill.style.transition = prevTr;
+            });
+        }
     }
 
     var text = el.textContent;
