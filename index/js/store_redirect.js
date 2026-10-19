@@ -1,14 +1,13 @@
 /**
  * Store redirection: when both "one_link_mobile_package_name" (Android) and
- * "one_link_mobile_bundle_id" (iOS) are set, open the Google Play (Android) or
+ * "one_link_mobile_app_store_id" (iOS) are set, open the Google Play (Android) or
  * the App Store (iOS) for the matching app.
  */
 (function() {
   var params = new URLSearchParams(window.location.search);
   var packageName = (params.get('one_link_mobile_package_name') || '').trim();
-  var bundleId = (params.get('one_link_mobile_bundle_id') || '').trim();
-  var idPattern = /^[A-Za-z0-9._-]+$/;
-  if (!idPattern.test(packageName) || !idPattern.test(bundleId)) {
+  var appStoreId = (params.get('one_link_mobile_app_store_id') || '').trim();
+  if (!/^[A-Za-z0-9._-]+$/.test(packageName) || !/^\d+$/.test(appStoreId)) {
     return;
   }
 
@@ -20,16 +19,6 @@
   if (isAndroid) {
     window.location.replace('https://play.google.com/store/apps/details?id=' + encodeURIComponent(packageName));
   } else if (isIos) {
-    // The App Store needs the numeric app id: resolve it from the bundle id.
-    var fallback = 'https://apps.apple.com/search?term=' + encodeURIComponent(bundleId);
-    fetch('https://itunes.apple.com/lookup?bundleId=' + encodeURIComponent(bundleId))
-      .then(function(response) { return response.json(); })
-      .then(function(data) {
-        var url = data.results && data.results[0] && data.results[0].trackViewUrl;
-        window.location.replace(url || fallback);
-      })
-      .catch(function() {
-        window.location.replace(fallback);
-      });
+    window.location.replace('https://apps.apple.com/app/id' + appStoreId);
   }
 })();
