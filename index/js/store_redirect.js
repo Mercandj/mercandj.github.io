@@ -3,7 +3,7 @@
  * Google Play (Android) or the App Store (iOS) for this package name / bundle id.
  */
 (function() {
-  var appId = new URLSearchParams(window.location.search).get('one_link_package_name_bunld_id');
+  var appId = new URLSearchParams(window.location.search).get('one_link_package_name_bundle_id');
   if (!appId) {
     return;
   }
